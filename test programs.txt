@@ -1,0 +1,42 @@
+1: GCD Program
+
+lw x6, 0(x5)
+addi x5, x5, 4
+lw x7, 0(x5)
+loop:
+beq x6, x7, exit
+blt x6, x7, L1
+sub x6, x6, x7
+j loop
+L1:
+sub x7, x7, x6
+j loop
+exit:
+sw x6, 4(x5)
+ecall
+
+
+2: Fibonnaci Sequence
+
+lui x15 0x2
+addi x10 x15 1807
+start:
+addi x6,x0,1
+addi x5,x0, 0
+up:
+add x7,x5,x6
+bge x7,x10,start
+sw x7,0x34(x0)
+sw x6,0x30(x0)
+lw x5,0x30(x0)
+sw x7,0x30(x0)
+lw x6,0x30(x0)
+jal up
+
+lw x15, 2(x5)
+addi x10, x15, 1807
+start:
+addi x6, x0, 1
+addi x5, x0, 0
+up:
+add x7, x5, x6
