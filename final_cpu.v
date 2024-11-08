@@ -1,4 +1,3 @@
-(* dont_touch = "true" *)
 module pipeline_main (
     input clk, rst,
     output [7:0] Anode_Activate,
@@ -401,9 +400,6 @@ module pipeline_main (
 
 endmodule
 
-
-//Verified 
-(* dont_touch = "true" *)
 module PC_Module (
     // Inputs
     input wire clk_50MHZ,
@@ -451,8 +447,6 @@ module PC_Module (
 
 endmodule
 
-//Verified
-(* dont_touch = "true" *)
 module Instruction_Memory (
     // Inputs
     input wire [31:0] Mem_Address,
@@ -491,8 +485,6 @@ module Instruction_Memory (
     
 endmodule
 
-//Verified
-(* dont_touch = "true" *)
 module Branch_Jump (
     // Inputs
     input wire [31:0] Instruction,
@@ -548,8 +540,6 @@ module Branch_Jump (
     
 endmodule
 
-//Verified and check rst
-(* dont_touch = "true" *)
 module IF_ID_reg (
     // Inputs
     // Control Signals
@@ -631,9 +621,6 @@ module IF_ID_reg (
     
 endmodule
 
-
-//Verified and rst check
-(* dont_touch = "true" *)
 module Register_File (
     // Inputs
     input wire clk_50MHZ,
@@ -677,9 +664,6 @@ module Register_File (
 
 endmodule
 
-
-//Verified
-(* dont_touch = "true" *)
 module Control_Unit (
     // Inputs
     input wire Signal_Stall,
@@ -842,8 +826,6 @@ module Control_Unit (
     
 endmodule
 
-//Verified and rst check
-(* dont_touch = "true" *)
 module ID_EX_reg (
     // Inputs
     // Control Signals
@@ -1012,8 +994,6 @@ module ID_EX_reg (
 
 endmodule
 
-//Verified and Changed,  Define In1,2 in Intantiaton
-(* dont_touch = "true" *)
 module ALU (
     // Inputs
     input wire [3:0] ALU_Op_ID_EX,
@@ -1080,9 +1060,6 @@ module ALU (
     end
 endmodule 
 
-
-//Verified
-(* dont_touch = "true" *)
 module EX_MEM_Reg (
     // Inputs
     // Control Signals
@@ -1154,8 +1131,6 @@ module EX_MEM_Reg (
 
 endmodule
 
-//Verified
-(* dont_touch = "true" *)
 module Data_Memory (
     // Inputs
     input wire clk_50MHZ,
@@ -1208,9 +1183,6 @@ module Data_Memory (
 
 endmodule
 
-
-//Verified
-(* dont_touch = "true" *)
 module MEM_WB_Reg (
     // Inputs
     // Control Signals
@@ -1274,7 +1246,6 @@ module MEM_WB_Reg (
 
 endmodule
 
-(* dont_touch = "true" *)
 module Forwarding_Unit (
     // Inputs
     input wire Reg_Write_EX_MEM,
@@ -1312,7 +1283,6 @@ module Forwarding_Unit (
 
 endmodule
 
-(* dont_touch = "true" *)
 module Hazard_Detection_Unit (
     // Inputs
     input wire rst,
@@ -1341,7 +1311,6 @@ module Hazard_Detection_Unit (
 
 endmodule
 
-(* dont_touch = "true" *)
 module Branch_Table (
     // Inputs
     input wire clk_50MHZ,
@@ -1379,7 +1348,6 @@ module Branch_Table (
     assign State = BranchTable[Addr];
 endmodule
 
-(* dont_touch = "true" *)
 module Branch_Predictor (
     // Inputs
     input wire Outcome,
@@ -1410,7 +1378,7 @@ module Branch_Predictor (
 
 endmodule
 
-(* dont_touch = "true" *)
+
 module Writeback_Unit (
     // inputs
     input wire Mem_to_Reg_MEM_WB,
@@ -1432,7 +1400,7 @@ module Writeback_Unit (
     
 endmodule
 
-(* dont_touch = "true" *)
+
 module Eight_Digit_Hex_Display(
     input clk_50MHZ,
     input rst,
@@ -1537,7 +1505,7 @@ module Eight_Digit_Hex_Display(
     end
 endmodule
 
-(* dont_touch = "true" *)
+
 module cnn_core (
     input clk_20MHZ,
     input rst,
@@ -1642,7 +1610,6 @@ module cnn_core (
     end
 endmodule
 
-(* dont_touch = "true" *)
 module clock_cycle_counter(
     input clk_20MHZ,
     input cnn_en,
@@ -1670,8 +1637,6 @@ module clock_cycle_counter(
 
 endmodule
 
-
-(* dont_touch = "true" *)
 module Data_Buffer (
     input clk_20MHZ,
     input rst,
@@ -1727,7 +1692,6 @@ module Data_Buffer (
     end
 endmodule
 
-(* dont_touch = "true" *)
 module Convolution_1 (
     input clk_20MHZ,
     input rst,
@@ -1770,7 +1734,6 @@ module Convolution_1 (
     end
 endmodule
 
-(* dont_touch = "true" *)
 module Max_Pooling_1 (
     input clk_20MHZ,
     input rst,
@@ -1845,7 +1808,6 @@ module Max_Pooling_1 (
     end
 endmodule
 
-(* dont_touch = "true" *)
 module Convolution_2 (
     input clk_20MHZ,
     input rst,
@@ -1913,7 +1875,6 @@ module Convolution_2 (
     end
 endmodule
 
-(* dont_touch = "true" *)
 module Max_Pooling_2 (
     input clk_20MHZ,
     input rst,
@@ -1979,7 +1940,6 @@ module Max_Pooling_2 (
        
 endmodule
 
-(* dont_touch = "true" *)
 module Fully_Connected (
     input clk_20MHZ,
     input rst,
@@ -2033,7 +1993,6 @@ module Fully_Connected (
 
 endmodule
 
-(* dont_touch = "true" *)
 module predicted_class (
     input clk_20MHZ,
     input rst,
